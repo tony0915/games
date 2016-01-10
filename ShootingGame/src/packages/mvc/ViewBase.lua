@@ -59,7 +59,7 @@ end
 
 function ViewBase:showWithScene(transition, time, more)
     self:setVisible(true)
-    local scene = display.newScene(self.name_)
+    local scene = display.newScene(self.name_, {physics = true})
     scene:addChild(self)
     display.runScene(scene, transition, time, more)
     return self
